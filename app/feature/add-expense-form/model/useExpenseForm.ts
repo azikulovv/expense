@@ -1,4 +1,5 @@
 import { useExpenseList } from "~/entity/expense";
+import type { ExpenseType } from "~/entity/expense/model/types";
 import {
   formSchema,
   type FormSchema,
@@ -29,6 +30,7 @@ export const useExpenseForm = () => {
     add({
       ...result.data,
       id: crypto.randomUUID(),
+      type: result.data.type as ExpenseType,
     });
     form.amount = 0;
     form.title = "";
