@@ -1,4 +1,4 @@
-export type ExpenseType = "income" | "exponse";
+export type ExpenseType = "income" | "expense";
 
 export interface Expense {
   id: string;
