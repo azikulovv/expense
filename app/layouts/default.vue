@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import UiToastContainer from "~/shared/ui/toast/UiToastContainer.vue";
 import { BottomNavigation } from "~/widget/bottom-navigation";
 </script>
 
@@ -16,6 +17,8 @@ import { BottomNavigation } from "~/widget/bottom-navigation";
     <div
       class="pointer-events-none absolute -left-10 bottom-20 h-64 w-64 rounded-full bg-slate-300/40 blur-3xl"
     />
+
+    <UiToastContainer />
 
     <!-- Основной контент со скроллом -->
     <main

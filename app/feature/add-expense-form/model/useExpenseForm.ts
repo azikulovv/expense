@@ -4,10 +4,12 @@ import {
   formSchema,
   type FormSchema,
 } from "~/feature/add-expense-form/model/schema";
+import { useToast } from "~/shared/composables/useToast";
 
 export const useExpenseForm = () => {
   const { add } = useExpenseList();
   const { withdraw, deposit } = useBudget();
+  const router = useRouter();
 
   const form = reactive<FormSchema>({
     type: "expense",
@@ -37,6 +39,10 @@ export const useExpenseForm = () => {
       ...result.data,
       id: crypto.randomUUID(),
     });
+    form.amount = 0;
+    form.title = "";
+
+    router.push("/");
   }
 
   return {
