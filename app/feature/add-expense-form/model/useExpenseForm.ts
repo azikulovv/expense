@@ -1,4 +1,4 @@
-import { useBudget } from "~/entity/budget";
+import { useBudget } from "~/widget/budget";
 import { useExpenseList } from "~/entity/expense";
 import {
   formSchema,
@@ -8,7 +8,6 @@ import { useToast } from "~/shared/composables/useToast";
 
 export const useExpenseForm = () => {
   const { add } = useExpenseList();
-  const { withdraw, deposit } = useBudget();
   const router = useRouter();
 
   const form = reactive<FormSchema>({
@@ -27,12 +26,6 @@ export const useExpenseForm = () => {
       console.log(result.error.flatten().fieldErrors);
 
       return;
-    }
-
-    if (result.data.type === "expense") {
-      withdraw(result.data.amount);
-    } else {
-      deposit(result.data.amount);
     }
 
     add({

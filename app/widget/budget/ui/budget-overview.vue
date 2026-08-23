@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useBudget } from "~/entity/budget";
+import { useBudget } from "~/widget/budget";
 
 const { incoming, outcoming, percentage } = useBudget();
 </script>
