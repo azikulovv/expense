@@ -1,6 +1,8 @@
+export type ExpenseType = "income" | "exponse";
+
 export interface Expense {
   id: string;
   type: string;
-  title: string;
+  title: ExpenseType;
   amount: number;
 }
