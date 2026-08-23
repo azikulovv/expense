@@ -2,8 +2,9 @@
 import { useExpenseForm } from "~/feature/add-expense-form/model/useExpenseForm";
 import BaseButton from "~/shared/ui/button/BaseButton.vue";
 import BaseInput from "~/shared/ui/input/BaseInput.vue";
+import BaseSelect from "~/shared/ui/select/BaseSelect.vue";
 
-const { form, submit, errors } = useExpenseForm();
+const { form, errors, submit } = useExpenseForm();
 </script>
 
 <template>
@@ -21,8 +22,18 @@ const { form, submit, errors } = useExpenseForm();
       v-model.number="form.amount"
       :error="errors.amount?.[0]"
     />
-    <BaseInput
+    <BaseSelect
       label="Тип"
+      :options="[
+        {
+          label: 'Расход',
+          value: 'expense',
+        },
+        {
+          label: 'Доход',
+          value: 'income',
+        },
+      ]"
       placeholder="Тип"
       v-model="form.type"
       :error="errors.type?.[0]"

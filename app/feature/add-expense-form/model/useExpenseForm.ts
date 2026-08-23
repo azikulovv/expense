@@ -1,4 +1,5 @@
-import { useExpenseList } from "~/entity/expense/model/useExpenseList";
+import { useBudget } from "~/entity/budget";
+import { useExpenseList } from "~/entity/expense";
 import {
   formSchema,
   type FormSchema,
@@ -6,6 +7,7 @@ import {
 
 export const useExpenseForm = () => {
   const { add } = useExpenseList();
+  const { withdraw, deposit } = useBudget();
 
   const form = reactive<FormSchema>({
     type: "expense",
@@ -25,10 +27,15 @@ export const useExpenseForm = () => {
       return;
     }
 
+    if (result.data.type === "expense") {
+      withdraw(result.data.amount);
+    } else {
+      deposit(result.data.amount);
+    }
+
     add({
       ...result.data,
-      id: useId(),
-      description: "description",
+      id: crypto.randomUUID(),
     });
   }
 

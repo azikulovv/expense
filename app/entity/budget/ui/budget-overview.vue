@@ -23,7 +23,7 @@ const { incoming, outcoming, percentage } = useBudget();
         class="h-3.5 w-full overflow-hidden rounded-full border border-white/80 bg-slate-200/50 p-0.5 backdrop-blur-sm"
       >
         <div
-          class="h-full rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 shadow-[0_2px_8px_rgba(91,134,229,0.4)] transition-all duration-500"
+          class="h-full rounded-full bg-linear-to-r from-blue-500 to-indigo-500 shadow-[0_2px_8px_rgba(91,134,229,0.4)] transition-all duration-500"
           :style="{ width: `${percentage}%` }"
         />
       </div>

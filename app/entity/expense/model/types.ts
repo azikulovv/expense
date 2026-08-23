@@ -3,5 +3,4 @@ export interface Expense {
   type: string;
   title: string;
   amount: number;
-  description: string;
 }
