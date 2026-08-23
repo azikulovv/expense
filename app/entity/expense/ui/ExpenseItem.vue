@@ -1,9 +1,10 @@
 <script setup lang="ts">
 defineProps<{
-  icon: string;
-  type: string;
-  title: string;
-  amount: number;
+  expense: {
+    type: string;
+    title: string;
+    amount: number;
+  };
 }>();
 </script>
 
@@ -14,25 +15,26 @@ defineProps<{
     <div
       class="flex size-11 shrink-0 items-center justify-center rounded-xl border border-white/80 bg-linear-to-br from-indigo-50/80 to-blue-100/60 text-xl text-indigo-600 shadow-sm transition-transform group-hover:scale-105"
     >
-      {{ icon }}
+      i
     </div>
 
     <div class="min-w-0 flex-1">
       <p class="truncate text-sm font-bold text-slate-800">
-        {{ title }}
+        {{ expense.title }}
       </p>
 
       <span
         class="mt-1 inline-block rounded-md border border-white/80 bg-white/50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-slate-500 shadow-sm"
       >
-        {{ type }}
+        {{ expense.type }}
       </span>
     </div>
 
     <span
       class="rounded-xl border border-indigo-100 bg-indigo-50/80 px-2.5 py-1 text-xs font-extrabold text-indigo-600 backdrop-blur-md shadow-sm"
     >
-      {{ type === "income" ? "+" : "-" }}{{ amount.toLocaleString() }} ₸
+      {{ expense.type === "income" ? "+" : "-" }}
+      {{ expense.amount.toLocaleString() }} ₸
     </span>
   </button>
 </template>

@@ -1,6 +1,6 @@
 import { useExpenseList } from "~/entity/expense";
 
-export const useBudget = () => {
+export const useExpenseStats = () => {
   const { list } = useExpenseList();
 
   const outcoming = computed(() =>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useBudget } from "~/widget/budget";
+import { useExpenseStats } from "~/entity/expense/model/useExpenseStats";
 
-const { incoming, outcoming, percentage } = useBudget();
+const { incoming, outcoming, percentage } = useExpenseStats();
 </script>
 
 <template>
