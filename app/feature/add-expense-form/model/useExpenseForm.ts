@@ -15,6 +15,7 @@ export const useExpenseForm = () => {
   const errors = ref<Partial<Record<keyof FormSchema, string[]>>>({});
 
   function submit() {
+    errors.value = {};
     const result = formSchema.safeParse(form);
 
     if (!result.success) {

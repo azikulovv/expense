@@ -2,7 +2,6 @@
 defineProps<{
   to: string;
   icon: string;
-  label: string;
 }>();
 </script>
 
@@ -44,7 +43,5 @@ defineProps<{
         />
       </svg>
     </template>
-
-    <span>{{ label }}</span>
   </NuxtLink>
 </template>

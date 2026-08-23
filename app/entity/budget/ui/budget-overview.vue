@@ -5,22 +5,39 @@ const { incoming, outcoming, percentage } = useBudget();
 </script>
 
 <template>
-  <section class="rounded-[28px] bg-white p-5 text-zinc-950">
-    <p class="text-sm font-medium text-zinc-500">Осталось бюджета</p>
+  <section
+    class="relative overflow-hidden rounded-3xl border border-white/60 bg-white/40 p-6 text-slate-800 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(31,38,135,0.07)]"
+  >
+    <div
+      class="inline-block rounded-full border border-white/80 bg-white/60 px-3 py-1 text-xs font-semibold text-indigo-600 shadow-sm"
+    >
+      Осталось бюджета
+    </div>
 
-    <div class="mt-2 text-3xl font-bold tracking-tight">{{ incoming }} ₸</div>
+    <div class="mt-3 text-4xl font-bold tracking-tight text-slate-900">
+      {{ incoming }} <span class="text-2xl font-light text-slate-500">₸</span>
+    </div>
 
     <div class="mt-6">
-      <div class="h-2 overflow-hidden rounded-full bg-zinc-200">
+      <div
+        class="h-3.5 w-full overflow-hidden rounded-full border border-white/80 bg-slate-200/50 p-0.5 backdrop-blur-sm"
+      >
         <div
-          class="h-full w-1 rounded-full bg-zinc-950"
+          class="h-full rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 shadow-[0_2px_8px_rgba(91,134,229,0.4)] transition-all duration-500"
           :style="{ width: `${percentage}%` }"
         />
       </div>
 
-      <div class="mt-2 flex justify-between text-xs text-zinc-500">
-        <span>{{ outcoming }} ₸ потрачено</span>
-        <span>{{ percentage }}%</span>
+      <div
+        class="mt-3 flex justify-between text-xs font-semibold text-slate-600"
+      >
+        <span class="rounded-md bg-white/60 px-2 py-1 border border-white/80"
+          >{{ outcoming }} ₸ потрачено</span
+        >
+        <span
+          class="rounded-md bg-indigo-50 px-2 py-1 text-indigo-600 border border-indigo-100"
+          >{{ percentage }}%</span
+        >
       </div>
     </div>
   </section>
