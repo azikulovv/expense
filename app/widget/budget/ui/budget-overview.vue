@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useExpenseStats } from "~/entity/expense/model/useExpenseStats";
 
-const { incoming, outcoming, percentage } = useExpenseStats();
+const { totalExpense, remaining, percentage } = useExpenseStats();
 </script>
 
 <template>
@@ -15,7 +15,7 @@ const { incoming, outcoming, percentage } = useExpenseStats();
     </div>
 
     <div class="mt-3 text-4xl font-bold tracking-tight text-slate-900">
-      {{ incoming.toLocaleString() }}
+      {{ remaining.toLocaleString() }}
       <span class="text-2xl font-light text-slate-500">₸</span>
     </div>
 
@@ -33,7 +33,7 @@ const { incoming, outcoming, percentage } = useExpenseStats();
         class="mt-3 flex justify-between text-xs font-semibold text-slate-600"
       >
         <span class="rounded-md bg-white/60 px-2 py-1 border border-white/80">
-          {{ outcoming.toLocaleString() }} ₸ потрачено
+          {{ totalExpense.toLocaleString() }} ₸ потрачено
         </span>
         <span
           class="rounded-md bg-indigo-50 px-2 py-1 text-indigo-600 border border-indigo-100"
