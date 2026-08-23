@@ -8,7 +8,7 @@ export const useExpenseList = () => {
   }
 
   function remove(id: string) {
-    list.value = list.value.filter((item) => item.id != id);
+    list.value = list.value.filter((item) => item.id !== id);
   }
 
   return { list, add, remove };
