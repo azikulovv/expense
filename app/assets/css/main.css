@@ -15,7 +15,3 @@ body {
   overflow: hidden;
   background: #e0e8f5;
 }
-
-.h-dvh {
-  height: var(--tg-viewport-height, 100dvh);
-}
