@@ -8,4 +8,14 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
+
+  app: {
+    head: {
+      script: [
+        {
+          src: "https://telegram.org/js/telegram-web-app.js?63",
+        },
+      ],
+    },
+  },
 });
