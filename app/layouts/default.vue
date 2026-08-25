@@ -1,16 +1,6 @@
 <script setup lang="ts">
 import UiToastContainer from "~/shared/ui/toast/UiToastContainer.vue";
 import { BottomNavigation } from "~/widget/bottom-navigation";
-
-const contentSafeArea = getComputedStyle(
-  document.documentElement,
-).getPropertyValue("--tg-content-safe-area-inset-top");
-const safeArea = getComputedStyle(document.documentElement).getPropertyValue(
-  "--tg-safe-area-inset-top",
-);
-const appSafeArea = getComputedStyle(document.documentElement).getPropertyValue(
-  "--app-safe-area-top",
-);
 </script>
 
 <template>
@@ -32,14 +22,9 @@ const appSafeArea = getComputedStyle(document.documentElement).getPropertyValue(
 
     <!-- Основной контент со скроллом -->
     <main
-      class="relative z-10 flex-1 min-h-0 overflow-auto px-4 pt-[calc(var(--app-safe-area-top)+16px)] pb-[calc(var(--app-safe-area-bottom)+100px)]"
+      class="relative z-10 flex-1 overflow-auto px-4 pt-[calc(var(--app-safe-area-top)+16px)] pb-[calc(var(--app-safe-area-bottom)+100px)]"
     >
       <slot />
-      <ClientOnly>
-        <p>content: {{ contentSafeArea }}</p>
-        <p>safearea: {{ safeArea }}</p>
-        <p>app: {{ appSafeArea }}</p>
-      </ClientOnly>
     </main>
 
     <BottomNavigation />
