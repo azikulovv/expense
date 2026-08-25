@@ -5,7 +5,7 @@ import { BottomNavigation } from "~/widget/bottom-navigation";
 
 <template>
   <div
-    class="relative mx-auto flex min-h-dvh w-full max-w-107.5 flex-col overflow-hidden text-slate-800 selection:bg-indigo-500 selection:text-white"
+    class="relative mx-auto flex h-dvh w-full max-w-107.5 flex-col overflow-hidden text-slate-800 selection:bg-indigo-500 selection:text-white"
   >
     <!-- Фоновые ледяные орбы для создания эффекта преломления стекла -->
     <div
@@ -22,7 +22,7 @@ import { BottomNavigation } from "~/widget/bottom-navigation";
 
     <!-- Основной контент со скроллом -->
     <main
-      class="relative z-10 flex-1 overflow-auto px-4 pt-[calc(var(--app-safe-area-top)+16px)] pb-[calc(var(--app-safe-area-bottom)+100px)]"
+      class="relative z-10 min-h-0 flex-1 overflow-auto px-4 pt-[calc(var(--app-safe-area-top)+16px)] pb-[calc(var(--app-safe-area-bottom)+100px)]"
     >
       <slot />
     </main>
