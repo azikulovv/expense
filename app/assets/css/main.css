@@ -3,7 +3,9 @@
 
 @theme {
   --font-sans: "Manrope", sans-serif;
+}
 
+:root {
   --app-safe-area-top: var(
     --tg-content-safe-area-inset-top,
     env(safe-area-inset-top, 0px)
