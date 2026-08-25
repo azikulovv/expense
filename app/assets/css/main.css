@@ -4,9 +4,10 @@
 @theme {
   --font-sans: "Manrope", sans-serif;
 
-  --app-safe-area-top: var(
-    --tg-content-safe-area-inset-top,
-    env(safe-area-inset-top, 0px)
+  --app-safe-area-top: calc(
+    var(--tg-content-safe-area-inset-top, env(safe-area-inset-top, 0px))+var(
+        --tg-safe-area-top
+      )
   );
 
   --app-safe-area-bottom: var(
