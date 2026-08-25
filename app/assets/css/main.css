@@ -6,15 +6,8 @@
 }
 
 :root {
-  --app-safe-area-top: var(
-    --tg-content-safe-area-inset-top,
-    env(safe-area-inset-top, 0px)
-  );
-
-  --app-safe-area-bottom: var(
-    --tg-content-safe-area-inset-bottom,
-    env(safe-area-inset-bottom, 0px)
-  );
+  --app-safe-area-top: var(--tg-content-safe-area-inset-top);
+  --app-safe-area-bottom: var(--tg-content-safe-area-inset-bottom);
 }
 
 html,
