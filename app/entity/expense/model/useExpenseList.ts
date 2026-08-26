@@ -1,4 +1,4 @@
-import type { Expense } from "~/entity/expense/model/types";
+import type { Expense } from "~/entity/expense";
 
 export const useExpenseList = () => {
   const list = useState<Expense[]>("expense:list", () => []);

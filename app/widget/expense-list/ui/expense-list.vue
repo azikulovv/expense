@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { useExpenseList } from "~/entity/expense/model/useExpenseList";
-import ExpenseItem from "~/entity/expense/ui/ExpenseItem.vue";
+import { ExpenseItem, useExpenseList } from "~/entity/expense";
 
 const { list } = useExpenseList();
 </script>
