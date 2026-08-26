@@ -1,4 +1,3 @@
-import { ref } from "vue";
 import type { ToastProps } from "~/shared/ui/toast/UiToast.vue";
 
 const toasts = ref<ToastProps[]>([]);
