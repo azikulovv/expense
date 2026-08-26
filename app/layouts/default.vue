@@ -5,7 +5,7 @@ import { BottomNavigation } from "~/widget/bottom-navigation";
 
 <template>
   <div
-    class="relative mx-auto flex h-dvh w-full max-w-107.5 flex-col overflow-hidden text-slate-800 selection:bg-indigo-500 selection:text-white"
+    class="fixed top-0 left-0 mx-auto flex h-dvh w-full max-w-107.5 flex-col overflow-hidden text-slate-800 selection:bg-indigo-500 selection:text-white"
   >
     <!-- Фоновые ледяные орбы для создания эффекта преломления стекла -->
     <div
