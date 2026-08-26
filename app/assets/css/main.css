@@ -12,6 +12,6 @@
 
 html,
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
   background: #e0e8f5;
 }
