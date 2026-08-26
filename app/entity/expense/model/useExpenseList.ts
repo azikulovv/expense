@@ -1,7 +1,56 @@
 import type { Expense } from "~/entity/expense/model/types";
 
 export const useExpenseList = () => {
-  const list = useState<Expense[]>("expense:list", () => []);
+  const list = useState<Expense[]>("expense:list", () => [
+    {
+      id: "1",
+      amount: 1000,
+      title: "title",
+      type: "expense",
+    },
+    {
+      id: "1",
+      amount: 1000,
+      title: "title",
+      type: "expense",
+    },
+    {
+      id: "1",
+      amount: 1000,
+      title: "title",
+      type: "expense",
+    },
+    {
+      id: "1",
+      amount: 1000,
+      title: "title",
+      type: "expense",
+    },
+    {
+      id: "1",
+      amount: 1000,
+      title: "title",
+      type: "expense",
+    },
+    {
+      id: "1",
+      amount: 1000,
+      title: "title",
+      type: "expense",
+    },
+    {
+      id: "1",
+      amount: 1000,
+      title: "title",
+      type: "expense",
+    },
+    {
+      id: "1",
+      amount: 1000,
+      title: "title",
+      type: "expense",
+    },
+  ]);
 
   function add(value: Expense) {
     list.value = [...list.value, value];

@@ -22,7 +22,7 @@ import { BottomNavigation } from "~/widget/bottom-navigation";
 
     <!-- Основной контент со скроллом -->
     <main
-      class="relative z-10 flex-1 px-4 pt-[calc(1rem+var(--app-safe-area-top))] pb-[calc(6.25rem+var(--app-safe-area-bottom))]"
+      class="relative z-10 flex-1 px-4 overflow-y-auto pt-[calc(1rem+var(--app-safe-area-top))] pb-[calc(6.25rem+var(--app-safe-area-bottom))]"
     >
       <slot />
     </main>

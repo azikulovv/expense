@@ -10,6 +10,11 @@
   --app-safe-area-bottom: env(safe-area-inset-bottom, 0px);
 }
 
+* {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   overflow: hidden;
