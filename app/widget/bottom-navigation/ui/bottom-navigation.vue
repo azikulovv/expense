@@ -15,7 +15,7 @@ const items = [
 
 <template>
   <nav
-    class="fixed bottom-5 left-1/2 z-50 w-[calc(100%-2.5rem)] max-w-97.5 -translate-x-1/2 rounded-3xl border border-white/80 bg-white/40 p-1.5 backdrop-blur-2xl pb-[calc(0.375rem+env(safe-area-inset-bottom))]"
+    class="fixed bottom-5 left-1/2 z-50 w-[calc(100%-2.5rem)] max-w-97.5 -translate-x-1/2 rounded-3xl border border-white/80 bg-white/40 p-1.5 backdrop-blur-2xl"
   >
     <div class="grid grid-cols-2 gap-1.5">
       <BottomNavigationItem
