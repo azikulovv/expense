@@ -1,8 +1,26 @@
 <script lang="ts" setup>
 import { ArrowLeft } from "@primeicons/vue";
+import { telegram } from "~/shared/lib/telegram";
 import IconButton from "~/shared/ui/button/IconButton.vue";
 
-defineProps<{ to?: string; title: string; subtitle: string }>();
+const router = useRouter();
+const props = defineProps<{ to?: string; title: string; subtitle: string }>();
+
+onMounted(() => {
+  const { to } = props;
+
+  if (to) {
+    telegram.backButton.show().on(() => router.push(to));
+  }
+});
+
+onUnmounted(() => {
+  const { to } = props;
+
+  if (to) {
+    telegram.backButton.off(() => router.push(to));
+  }
+});
 </script>
 
 <template>
