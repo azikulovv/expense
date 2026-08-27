@@ -2,6 +2,7 @@
 import PageHeader from "~/widget/layout/page-header.vue";
 import { BudgetStats } from "~/widget/budget";
 import { ProfileCard, ProfileParameters } from "~/widget/profile";
+import { User } from "@primeicons/vue";
 
 useHead({
   title: "Профиль | Expense",
