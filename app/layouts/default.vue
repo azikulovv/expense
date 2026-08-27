@@ -22,11 +22,16 @@ import { BottomNavigation } from "~/widget/bottom-navigation";
 
     <!-- Основной контент со скроллом -->
     <main
-      class="relative z-10 flex-1 px-4 overflow-y-auto pt-[calc(1rem+var(--app-safe-area-top))] pb-[calc(6.25rem+var(--app-safe-area-bottom))]"
+      class="relative z-10 flex-1 px-4 overflow-y-auto pt-[calc(1rem+var(--app-safe-area-top))]"
+      :class="
+        $route.meta.hideBottomNavigation
+          ? 'pb-(--app-safe-area-bottom)'
+          : 'pb-[calc(6.25rem+var(--app-safe-area-bottom))]'
+      "
     >
       <slot />
     </main>
 
-    <BottomNavigation />
+    <BottomNavigation v-if="!$route.meta.hideBottomNavigation" />
   </div>
 </template>

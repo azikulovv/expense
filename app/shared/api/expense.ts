@@ -10,6 +10,10 @@ export class ExpenseApi {
     return this.list;
   }
 
+  getById(id: string) {
+    return this.list.filter((item) => item.id === id)[0];
+  }
+
   add(item: Omit<Expense, "id">) {
     this.list.push({ ...item, id: crypto.randomUUID() });
   }
