@@ -30,7 +30,13 @@ const { list } = useExpenseList();
       class="overflow-hidden rounded-3xl border border-white/70 bg-white/30 p-2 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.06)]"
     >
       <div v-if="list?.length" class="flex flex-col gap-1.5">
-        <ExpenseItem v-for="item in list" :key="item.id" :expense="item" />
+        <NuxtLink
+          v-for="item in list"
+          :key="item.id"
+          :to="`/operations/${item.id}`"
+        >
+          <ExpenseItem :expense="item" />
+        </NuxtLink>
       </div>
 
       <!-- Состояние для пустого списка -->
