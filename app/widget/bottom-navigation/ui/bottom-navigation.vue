@@ -10,6 +10,10 @@ const items = [
     to: "/operations",
     icon: "plus",
   },
+  {
+    to: "/profile",
+    icon: "user",
+  },
 ];
 </script>
 
@@ -17,7 +21,7 @@ const items = [
   <nav
     class="fixed bottom-5 left-1/2 z-50 w-[calc(100%-2.5rem)] max-w-97.5 -translate-x-1/2 rounded-3xl border border-white/80 bg-white/40 p-1.5 backdrop-blur-2xl mb-[calc(0.375rem+env(safe-area-inset-bottom))]"
   >
-    <div class="grid grid-cols-2 gap-1.5">
+    <div class="grid grid-cols-3 gap-1.5">
       <BottomNavigationItem
         v-for="item in items"
         :key="item.to"

@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@nuxt/ui": "^4.11.0",
+    "@primeicons/vue": "^8.0.0",
     "@tailwindcss/vite": "^4.3.3",
     "nuxt": "^4.5.2",
     "tailwindcss": "^4.3.3",
