@@ -1,10 +1,8 @@
 <script setup lang="ts">
+import type { Expense } from "~/entity/expense/model/types";
+
 defineProps<{
-  expense: {
-    type: string;
-    title: string;
-    amount: number;
-  };
+  expense: Expense;
 }>();
 </script>
 
@@ -30,11 +28,19 @@ defineProps<{
       </span>
     </div>
 
-    <span
-      class="rounded-xl border border-indigo-100 bg-indigo-50/80 px-2.5 py-1 text-xs font-extrabold text-indigo-600 backdrop-blur-md shadow-sm"
-    >
-      {{ expense.type === "income" ? "+" : "-" }}
-      {{ expense.amount.toLocaleString() }} ₸
-    </span>
+    <div class="flex flex-col gap-y-1 items-end">
+      <p
+        class="rounded-xl border border-indigo-100 bg-indigo-50/80 px-2.5 py-1 text-xs font-extrabold text-indigo-600 backdrop-blur-md shadow-sm"
+      >
+        {{ expense.type === "income" ? "+" : "-" }}
+        {{ expense.amount.toLocaleString() }} ₸
+      </p>
+
+      <span
+        class="inline-block rounded-md border border-white/80 bg-white/50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-slate-500 shadow-sm"
+      >
+        {{ new Date(expense.createdAt).toLocaleString() }}
+      </span>
+    </div>
   </button>
 </template>
