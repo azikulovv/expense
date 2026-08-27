@@ -1,13 +1,17 @@
 <script lang="ts" setup>
 import { useExpense } from "~/entity/expense/model/useExpense";
+import PageHeader from "~/widget/layout/page-header.vue";
 import BaseButton from "~/shared/ui/button/BaseButton.vue";
-import PageHeader from "~/shared/ui/layout/page-header.vue";
 import ExpenseCard from "~/widget/expense/ui/expense-card.vue";
 import ExpenseError from "~/widget/expense/ui/expense-error.vue";
 import ExpenseInformation from "~/widget/expense/ui/expense-information.vue";
 
 definePageMeta({
   hideBottomNavigation: true,
+});
+
+useHead({
+  title: "Детали операции | Expense",
 });
 
 const route = useRoute();

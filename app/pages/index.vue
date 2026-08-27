@@ -2,6 +2,10 @@
 import { BudgetOverview } from "~/widget/budget";
 import BaseButton from "~/shared/ui/button/BaseButton.vue";
 import ExpenseList from "~/widget/expense/ui/expense-list.vue";
+
+useHead({
+  title: "Expense",
+});
 </script>
 
 <template>

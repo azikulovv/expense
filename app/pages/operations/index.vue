@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { AddExpenseForm } from "~/feature/add-expense-form";
+
+useHead({
+  title: "Новая операция | Expense",
+});
 </script>
 
 <template>
