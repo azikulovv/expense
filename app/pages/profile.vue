@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { ChartBar, CreditCard, List, User, Wallet } from "@primeicons/vue";
 import { useExpenseList, useExpenseStats } from "~/entity/expense";
-import { getTelegramWebApp } from "~/shared/lib/telegram/web-app";
 import PageHeader from "~/widget/layout/page-header.vue";
 
 useHead({
   title: "Профиль | Expense",
 });
 
+const { $telegram } = useNuxtApp();
 const { list } = useExpenseList();
 const { totalIncome, totalExpense, remaining } = useExpenseStats();
 
@@ -16,7 +16,7 @@ const profileSubtitle = ref("Личные финансы в одном мест�
 const initials = ref("E");
 
 onMounted(() => {
-  const user = getTelegramWebApp()?.initDataUnsafe?.user;
+  const user = $telegram.webApp.initDataUnsafe?.user;
 
   if (!user) return;
 

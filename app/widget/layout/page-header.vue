@@ -1,16 +1,17 @@
 <script lang="ts" setup>
 import { ArrowLeft } from "@primeicons/vue";
-import { telegram } from "~/shared/lib/telegram";
 import IconButton from "~/shared/ui/button/IconButton.vue";
 
-const router = useRouter();
 const props = defineProps<{ to?: string; title: string; subtitle: string }>();
+
+const router = useRouter();
+const { $telegram } = useNuxtApp();
 
 onMounted(() => {
   const { to } = props;
 
   if (to) {
-    telegram.backButton.show().on(() => router.push(to));
+    $telegram.backButton.show().on(() => router.push(to));
   }
 });
 
@@ -18,7 +19,7 @@ onUnmounted(() => {
   const { to } = props;
 
   if (to) {
-    telegram.backButton.off(() => router.push(to));
+    $telegram.backButton.off(() => router.push(to)).hide();
   }
 });
 </script>

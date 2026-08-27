@@ -1,7 +1,5 @@
 export function getTelegramWebApp() {
-  if (!import.meta.client) {
-    return null;
-  }
+  if (import.meta.server) return null;
 
   return window.Telegram?.WebApp ?? null;
 }
