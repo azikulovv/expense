@@ -2,6 +2,7 @@
 import { BudgetOverview } from "~/widget/budget";
 import BaseButton from "~/shared/ui/button/BaseButton.vue";
 import ExpenseList from "~/widget/expense/ui/expense-list.vue";
+import PageHeader from "~/widget/layout/page-header.vue";
 
 useHead({
   title: "Expense",
@@ -11,17 +12,7 @@ useHead({
 <template>
   <div class="flex flex-col">
     <!-- Шапка страницы -->
-    <header class="flex items-center justify-between py-1">
-      <div>
-        <h1 class="text-2xl font-black tracking-tight text-slate-800">
-          Expenses
-        </h1>
-        <p class="mt-0.5 text-xs font-semibold text-slate-500">
-          Обзор текущего бюджета
-        </p>
-      </div>
-
-      <!-- Стеклянный индикатор месяца -->
+    <PageHeader title="Expenses" subtitle="Обзор текущего бюджета">
       <div
         class="inline-flex items-center gap-1.5 rounded-2xl border border-white/80 bg-white/50 px-3 py-1.5 text-xs font-bold text-indigo-600 backdrop-blur-xl shadow-sm"
       >
@@ -30,7 +21,7 @@ useHead({
         />
         Август 2026
       </div>
-    </header>
+    </PageHeader>
 
     <!-- Обзор бюджета (BudgetOverview) -->
     <BudgetOverview class="mt-4" />
