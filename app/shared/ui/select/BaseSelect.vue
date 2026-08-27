@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { Check, ChevronDown } from "@primeicons/vue";
 
 interface Option {
   label: string;
@@ -72,18 +72,7 @@ const selectedOption = computed(() =>
         class="text-xs text-slate-400 transition-transform duration-300"
         :class="{ 'rotate-180 text-indigo-600': isOpen }"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          class="size-6"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
-            clip-rule="evenodd"
-          />
-        </svg>
+        <ChevronDown class="size-6" />
       </span>
     </button>
 
@@ -115,20 +104,7 @@ const selectedOption = computed(() =>
             <span>{{ option.label }}</span>
           </span>
           <span v-if="model === option.value" class="text-xs text-indigo-600">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-              />
-            </svg>
+            <Check class="size-4" />
           </span>
         </li>
       </ul>
