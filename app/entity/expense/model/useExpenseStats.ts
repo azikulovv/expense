@@ -28,5 +28,14 @@ export const useExpenseStats = () => {
     );
   });
 
-  return { totalIncome, totalExpense, remaining, percentage };
+  const balanceLabel = computed(() => {
+    const amount = remaining.value ?? 0;
+    const sign = amount >= 0 ? "+" : "−";
+
+    return `${sign} ${Math.abs(amount).toLocaleString("ru-RU")} ₸`;
+  });
+
+  const operationCount = computed(() => list.value?.length ?? 0);
+
+  return { totalIncome, totalExpense, remaining, percentage, balanceLabel, operationCount };
 };

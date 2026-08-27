@@ -1,6 +1,13 @@
 <script setup lang="ts">
+import { useUser } from "~/entity/user";
 import UiToastContainer from "~/shared/ui/toast/UiToastContainer.vue";
 import { BottomNavigation } from "~/widget/bottom-navigation";
+
+const { load } = useUser();
+
+onMounted(() => {
+  load();
+});
 </script>
 
 <template>
