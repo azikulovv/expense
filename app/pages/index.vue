@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { BudgetOverview } from "~/widget/budget";
 import BaseButton from "~/shared/ui/button/BaseButton.vue";
-import ExpenseList from "~/widget/expense-list/ui/expense-list.vue";
+import ExpenseList from "~/widget/expense/ui/expense-list.vue";
 </script>
 
 <template>
