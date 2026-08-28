@@ -1,9 +1,5 @@
-import { useExpenseList } from "~/entity/expense";
-import type { ExpenseType } from "~/entity/expense/model/types";
-import {
-  formSchema,
-  type FormSchema,
-} from "~/feature/add-expense-form/model/schema";
+import { useExpenseList, type ExpenseType } from "~/entity/expense";
+import { formSchema, type FormSchema } from "~/feature/add-expense-form";
 
 export const useExpenseForm = () => {
   const { add } = useExpenseList();
