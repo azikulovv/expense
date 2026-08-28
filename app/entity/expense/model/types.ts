@@ -5,6 +5,6 @@ export interface Expense {
   type: ExpenseType;
   title: string;
   amount: number;
-  updatedAt: string;
-  createdAt: string;
+  updatedAt: string | Date;
+  createdAt: string | Date;
 }

@@ -29,8 +29,9 @@ export const useExpenseForm = () => {
 
     add({
       ...result.data,
-      id: crypto.randomUUID(),
       type: result.data.type as ExpenseType,
+      updatedAt: new Date(),
+      createdAt: new Date(),
     });
     form.amount = 0;
     form.title = "";
