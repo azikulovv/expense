@@ -1,25 +1,30 @@
 import { expect, it, describe } from "vitest";
 import { useExpenseList } from "./useExpenseList";
-import { useExpenseStats } from "~/entity/expense/model/useExpenseStats";
-import type { Expense } from "~/entity/expense/model/types";
+import { useExpenseStats, type Expense } from "~/entity/expense";
 
 const income: Expense = {
   id: "1",
   amount: 10000,
   title: "job",
   type: "income",
+  createdAt: new Date(),
+  updatedAt: new Date(),
 };
 const expense: Expense = {
   id: "2",
   amount: 5000,
   title: "coffee",
   type: "expense",
+  createdAt: new Date(),
+  updatedAt: new Date(),
 };
 const expense2: Expense = {
   id: "3",
   amount: 2000,
   title: "bread",
   type: "expense",
+  createdAt: new Date(),
+  updatedAt: new Date(),
 };
 
 describe("useExpenseStats", () => {

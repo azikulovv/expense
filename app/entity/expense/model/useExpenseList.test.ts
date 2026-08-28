@@ -17,6 +17,8 @@ describe("useExpenseList", () => {
       type: "expense",
       title: "Кофе",
       amount: 100,
+      createdAt: new Date(),
+      updatedAt: new Date(),
     };
 
     add(expense);
@@ -32,6 +34,8 @@ describe("useExpenseList", () => {
       type: "expense",
       title: "Шоколад",
       amount: 100,
+      createdAt: new Date(),
+      updatedAt: new Date(),
     };
 
     add(expense);

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Expense } from "~/entity/expense/model/types";
+import type { Expense } from "~/entity/expense";
 
 defineProps<{
   expense: Expense;
