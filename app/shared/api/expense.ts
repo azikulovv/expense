@@ -1,10 +1,7 @@
-import { expenseList } from "~/constants/expenese-list";
 import type { Expense } from "~/entity/expense";
 
 export class ExpenseApi {
-  private list: Expense[] = expenseList.toSorted(
-    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
-  );
+  private list: Expense[] = [];
 
   get getList() {
     return this.list;

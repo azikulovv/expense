@@ -1,3 +1,5 @@
+// @vitest-environment node
+
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { requireTelegramWebApp } from "~/shared/lib/telegram/web-app";
 import { HapticFeedback } from "~/shared/lib/telegram/haptic-feedback";

@@ -1,3 +1,5 @@
+// @vitest-environment node
+
 import { describe, expect, it, vi } from "vitest";
 import { getInitData } from "~/shared/lib/telegram/init-data";
 import { requireTelegramWebApp } from "~/shared/lib/telegram/web-app";
